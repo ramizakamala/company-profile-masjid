@@ -1,0 +1,35 @@
+.donation-cta {
+  padding-block: var(--section-space);
+  background: var(--color-green-deep);
+  color: #EDE7D8;
+}
+
+.donation-cta__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.donation-cta__headline {
+  font-size: var(--step-3);
+  color: #FBF8F0;
+  max-width: 16ch;
+  margin-bottom: 1rem;
+}
+
+.donation-cta__support {
+  color: #C9CDBF;
+  max-width: 46ch;
+}
+
+.donation-cta__btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .donation-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

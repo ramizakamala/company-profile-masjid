@@ -1,0 +1,221 @@
+.donation-amount-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.donation-amount__title {
+  font-size: var(--step-2);
+  margin-bottom: 1.25rem;
+}
+
+.donation-amount__grid {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.donation-amount__pill {
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  padding: 0.65rem 1.4rem;
+  border-radius: 99px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--step-0);
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.donation-amount__pill:hover,
+.donation-amount__pill--active {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(27, 67, 50, 0.2);
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.donation-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 67, 50, 0.12);
+  border-radius: var(--radius-m);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-card__badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(45, 106, 79, 0.1);
+  color: var(--color-green);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.donation-card__badge--qris {
+  background: rgba(212, 163, 89, 0.15);
+  color: #8a6218;
+}
+
+.donation-card h3 {
+  font-size: var(--step-1);
+  margin-bottom: 1rem;
+}
+
+.donation-card p {
+  color: var(--color-ink-soft);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.donation-card__dl {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.donation-card__acc-name {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.donation-card__acc-num {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #F4F6F3;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.donation-card__copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--color-green);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.donation-card__copy-btn.copied {
+  background: #25D366;
+}
+
+.donation-card__qris-box {
+  margin-top: auto;
+  background: #FFFFFF;
+  border: 1px solid #E0E4DE;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.qris-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #D32F2F;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.qris-code-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 0.75rem;
+}
+
+.qris-svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.qris-merchant {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #555555;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.donation-confirm-btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.campaign-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.campaign-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-m);
+  padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.campaign-card h3 {
+  font-size: var(--step-1);
+  margin-bottom: 0.5rem;
+}
+
+.campaign-card p {
+  color: var(--color-ink-soft);
+  font-size: var(--step--1);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .donation-grid {
+    grid-template-columns: 1fr;
+  }
+}

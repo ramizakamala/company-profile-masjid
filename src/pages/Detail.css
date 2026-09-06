@@ -1,0 +1,15 @@
+.article-detail__byline {
+  color: var(--color-ink-soft);
+  font-size: var(--step--1);
+  margin: 1rem 0 2rem;
+  max-width: none;
+}
+
+.article-detail__related-title {
+  font-size: var(--step-3);
+  margin: 0.75rem 0 2.5rem;
+}
+
+.detail-content__cta {
+  margin-top: 2.5rem;
+}
