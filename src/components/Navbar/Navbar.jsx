@@ -31,12 +31,7 @@ export default function Navbar() {
       <div className="container navbar__inner">
         <NavLink to="/" className="navbar__logo" onClick={() => setOpen(false)}>
           <span className="navbar__logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-              <path
-                d="M12 2 L14.6 9.4 L22 12 L14.6 14.6 L12 22 L9.4 14.6 L2 12 L9.4 9.4 Z"
-                fill="currentColor"
-              />
-            </svg>
+            <img src="/images/logo-masjid.jpg" alt="" />
           </span>
           <span className="navbar__logo-text">
             <strong>Al-Manshur</strong>
