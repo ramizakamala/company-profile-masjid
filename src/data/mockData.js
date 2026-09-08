@@ -1,5 +1,16 @@
-// Centralized mock data. In a future Laravel/MySQL migration, each export
-// below maps to a REST resource (e.g. GET /api/programs).
+// =====================================================================
+// DATA SENTRAL WEBSITE MASJID AL-MANSHUR
+// ---------------------------------------------------------------------
+// STATUS DATA (per 2026):
+//   [ASLI]   Alamat, tahun berdiri (2025), nama masjid
+//   [DUMMY]  Semua di bawah ini — dummy untuk keperluan desain/demo,
+//            MENUNGGU data resmi dari pengurus sebelum situs live.
+//            Jangan tampilkan angka rekening/QRIS palsu ke publik.
+//
+// File lain yang perlu diisi pengurus: lihat DATA_PENGURUS.md di root.
+// =====================================================================
+
+// ---------- [ASLI] Alamat & kontak dasar ada di Footer/Contact/Location ----------
 
 export const prayerTimes = [
   { name: 'Subuh', time: '04:42' },
@@ -9,6 +20,7 @@ export const prayerTimes = [
   { name: 'Isya', time: '19:16' },
 ];
 
+// [DUMMY] angka statistik — ganti dengan data riil pengurus
 export const stats = [
   { value: '2025', label: 'Tahun berdiri', note: 'resmi berdiri & mulai melayani jamaah' },
   { value: '1.200+', label: 'Jamaah & warga binaan' },
@@ -17,6 +29,7 @@ export const stats = [
   { value: 'Rp 1,2 M+', label: 'Zakat & infak tersalurkan' },
 ];
 
+// [DUMMY] daftar program — ganti dengan program riil masjid
 export const programs = [
   {
     id: 'quran-tafsir-circle',
@@ -100,6 +113,7 @@ export const programs = [
   },
 ];
 
+// [DUMMY] daftar kegiatan — ganti dengan agenda riil
 export const events = [
   {
     id: 'weekly-tafsir',
@@ -175,6 +189,7 @@ export const events = [
   },
 ];
 
+// [DUMMY] artikel
 export const articles = [
   {
     id: 'welcoming-new-neighbors',
@@ -231,9 +246,10 @@ export const articles = [
   },
 ];
 
+// [DUMMY] galeri (2 foto lokal sudah asli, sisanya placeholder)
 export const galleryItems = [
   { id: 'g0', category: 'General', title: 'AL-Manshur Mosque Exterior & Gardens', image: '/images/mosque_exterior.jpg' },
-  { id: 'g1', category: 'Education', title: 'Qur’an & Tahfidz Learning Circle', image: '/images/quran_class.jpg' },
+  { id: 'g1', category: 'Education', title: 'Qur\u2019an & Tahfidz Learning Circle', image: '/images/quran_class.jpg' },
   { id: 'g2', category: 'Social Activities', title: 'Bakti Sosial & Pembagian Sembako Jamaah', image: '/images/social_drive.jpg' },
   { id: 'g3', category: 'Events', title: 'Annual Community Gathering', image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop' },
   { id: 'g4', category: 'Education', title: 'Weekend Arabic School', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop' },
@@ -241,10 +257,10 @@ export const galleryItems = [
   { id: 'g6', category: 'Youth', title: 'Youth Basketball Night', image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop' },
   { id: 'g7', category: 'Social Activities', title: 'Neighbors Food Pantry', image: 'https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?q=80&w=1200&auto=format&fit=crop' },
   { id: 'g8', category: 'Events', title: 'Friday Khutbah Series', image: 'https://images.unsplash.com/photo-1591825381515-6e3c50c74c98?q=80&w=1200&auto=format&fit=crop' },
-  { id: 'g9', category: 'Community', title: 'Sisters’ Wellness Circle', image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1200&auto=format&fit=crop' },
+  { id: 'g9', category: 'Community', title: 'Sisters\u2019 Wellness Circle', image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1200&auto=format&fit=crop' },
 ];
 
-
+// [DUMMY] testimoni — ganti dengan kesaksian jamaah/donatur asli
 export const testimonials = [
   {
     quote: 'Dulu anak saya malu mengaji di depan orang. Sekarang setiap Jumat sore justru dia yang minta diantar ke TPA \u2014 hafalannya bahkan sudah lebih panjang dari saya.',
@@ -263,6 +279,7 @@ export const testimonials = [
   },
 ];
 
+// [DUMMY] struktur pengurus
 export const leadership = [
   {
     name: 'Pengurus AL-Manshur',
@@ -286,9 +303,25 @@ export const leadership = [
   },
 ];
 
+// [ASLI + DUMMY] sejarah: 2023-2024 perintisan, 2025 berdiri (ASLI) — detail dummy
 export const timeline = [
   { year: '2023', text: 'Sekelompok warga mulai rutin mengadakan pengajian dan sholat berjamaah di rumah salah satu warga.' },
   { year: '2024', text: 'Kesepakatan warga terbentuk; pengurus dan panitia pembangunan mulai menggalang dana secara gotong royong.' },
   { year: '2025', text: 'Masjid Al-Manshur resmi berdiri — bangunan sederhana hasil karya dan donasi warga, langsung digunakan untuk sholat berjamaah lima waktu.' },
   { year: '2026', text: 'TPA & tahfidz, kajian rutin, dan lumbung pangan warga mulai berjalan; jamaah terus bertumbuh.' },
 ];
+
+// =====================================================================
+// DATA DONASI — KOSONGKAN SELAMA BELUM ADA DATA RESMI.
+// Saat pengurus sudah memberi rekening & foto QRIS, isi objek di bawah.
+// Selama masih null, halaman donasi otomatis menampilkan "menyusul"
+// (tidak ada nomor/QR palsu yang ditampilkan ke publik).
+// =====================================================================
+export const donationInfo = {
+  // Contoh format saat data sudah ada:
+  // bank: { name: 'Bank Syariah Indonesia (BSI)', accountName: 'Yayasan ...', accountNumber: '7123456789' },
+  bank: null,
+
+  // Foto QRIS asli (taruh di public/images/, mis. '/images/qris.png')
+  qris: null,
+};
