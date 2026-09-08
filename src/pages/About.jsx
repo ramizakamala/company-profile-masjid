@@ -32,17 +32,16 @@ export default function About() {
           </div>
           <div className="about-story__text">
             <p className="eyebrow">Our Story</p>
-            <h2>From a rented room to a full community home.</h2>
+            <h2>From a small home gathering to a mosque of our own.</h2>
             <p>
-              AL-Manshur began in 2014 when a small group of families started holding
-              Friday prayers together in a rented community room. As more neighbors
-              joined, the need for a permanent space became clear.
+              AL-Manshur began as a small group of neighbors holding regular study circles
+              and prayers in one family&rsquo;s home. As more residents joined, the dream of
+              a dedicated mosque took shape.
             </p>
             <p>
-              Over the following decade, that small gathering grew into a full-time
-              center offering daily prayer, weekend education, youth mentorship, and
-              social support \u2014 built almost entirely through volunteer effort and
-              community donation.
+              Through collective effort and community donations, Masjid Al-Manshur was
+              officially established in 2025 &mdash; and is now growing into a center for
+              daily prayer, Qur&rsquo;an education, and mutual support for the neighborhood.
             </p>
           </div>
         </div>

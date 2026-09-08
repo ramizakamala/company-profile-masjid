@@ -70,7 +70,7 @@ export default function Hero() {
               Jadwal &amp; Lokasi
             </Link>
           </div>
-          <p className="hero__meta">Sejak 2014 · Sumpiuh, Banyumas · Terbuka untuk umum</p>
+          <p className="hero__meta">Berdiri 2025 · Sumpiuh, Banyumas · Terbuka untuk umum</p>
         </div>
 
         <div className="hero__stage">

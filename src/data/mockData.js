@@ -7,13 +7,17 @@ export const prayerTimes = [
   { name: 'Ashar', time: '15:21' },
   { name: 'Maghrib', time: '18:02' },
   { name: 'Isya', time: '19:16' },
-];export const stats = [
-  { value: '2014', label: 'Tahun berdiri', note: 'berawal dari ruang sewa sederhana' },
+];
+
+export const stats = [
+  { value: '2025', label: 'Tahun berdiri', note: 'resmi berdiri & mulai melayani jamaah' },
   { value: '1.200+', label: 'Jamaah & warga binaan' },
   { value: '15+', label: 'Program rutin yang berjalan' },
   { value: '180+', label: 'Santri TPA & tahfidz' },
   { value: 'Rp 1,2 M+', label: 'Zakat & infak tersalurkan' },
-];export const programs = [
+];
+
+export const programs = [
   {
     id: 'quran-tafsir-circle',
     category: 'Pendidikan',
@@ -94,7 +98,9 @@ export const prayerTimes = [
     location: 'Gedung Serbaguna',
     image: 'https://images.unsplash.com/photo-1608755728617-aefab37d2edd?q=80&w=1200&auto=format&fit=crop',
   },
-];export const events = [
+];
+
+export const events = [
   {
     id: 'weekly-tafsir',
     title: 'Kajian Tafsir Mingguan',
@@ -167,7 +173,9 @@ export const prayerTimes = [
     speaker: 'Tim Guru Tahfidz',
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop',
   },
-];export const articles = [
+];
+
+export const articles = [
   {
     id: 'welcoming-new-neighbors',
     title: 'How Our Community Welcomes New Neighbors',
@@ -279,9 +287,8 @@ export const leadership = [
 ];
 
 export const timeline = [
-  { year: '2014', text: 'A small group of families begins holding Friday prayers in a rented community room.' },
-  { year: '2016', text: 'The Center acquires its first permanent building and opens daily for the five prayers.' },
-  { year: '2019', text: 'The Weekend Arabic School and Youth programs launch in response to community demand.' },
-  { year: '2022', text: 'The Learning Center wing is completed, doubling classroom capacity.' },
-  { year: '2026', text: 'The Center now serves over 1,200 community members through 15+ ongoing programs.' },
+  { year: '2023', text: 'Sekelompok warga mulai rutin mengadakan pengajian dan sholat berjamaah di rumah salah satu warga.' },
+  { year: '2024', text: 'Kesepakatan warga terbentuk; pengurus dan panitia pembangunan mulai menggalang dana secara gotong royong.' },
+  { year: '2025', text: 'Masjid Al-Manshur resmi berdiri — bangunan sederhana hasil karya dan donasi warga, langsung digunakan untuk sholat berjamaah lima waktu.' },
+  { year: '2026', text: 'TPA & tahfidz, kajian rutin, dan lumbung pangan warga mulai berjalan; jamaah terus bertumbuh.' },
 ];

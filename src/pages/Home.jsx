@@ -47,18 +47,18 @@ export default function Home() {
       {/* Statement */}
       <section className="section section--deep hm-state">
         <p className="hm-state__year" aria-hidden="true">
-          2014
+          2025
         </p>
         <div className="container hm-state__inner">
-          <p className="eyebrow">Sejak 2014</p>
+          <p className="eyebrow">Berdiri 2025</p>
           <h2 className="hm-state__big">
             Kami percaya masjid adalah <em>rumah kedua</em> — tempat anak-anak belajar mengaji,
             tetangga berbagi rezeki, dan setiap orang punya tempat pulang.
           </h2>
           <div className="hm-state__foot">
             <p>
-              Berawal dari sekelompok keluarga yang sholat berjamaah di ruang sewa sederhana,
-              Al-Manshur kini menjadi rumah bagi ribuan warga Sumpiuh dan sekitarnya.
+              Berawal dari pengajian kecil di rumah warga, Al-Manshur resmi berdiri tahun 2025
+              — dan terus tumbuh bersama warga Sumpiuh dan sekitarnya.
             </p>
             <Link to="/about" className="btn btn-outline">
               Kenal Lebih Dekat
