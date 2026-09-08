@@ -3,14 +3,7 @@
 /* ---------- Statement band ---------- */
 .hm-state {
   position: relative;
-}
-
-.hm-state::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(900px 420px at 12% 0%, rgba(94, 234, 212, 0.12), rgba(94, 234, 212, 0) 60%);
-  pointer-events: none;
+  background: var(--color-green-deep);
 }
 
 .hm-state__year {
@@ -244,12 +237,8 @@
 }
 
 /* ---------- Statistik: kartu besar overlap ---------- */
-.hm-stats::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(1000px 500px at 90% 10%, rgba(94, 234, 212, 0.14), rgba(94, 234, 212, 0) 60%);
-  pointer-events: none;
+.hm-stats {
+  background: var(--color-green-deep);
 }
 
 .hm-stats__head {

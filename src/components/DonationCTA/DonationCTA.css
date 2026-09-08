@@ -2,8 +2,7 @@
   position: relative;
   overflow: hidden;
   padding-block: var(--section-space);
-  background: radial-gradient(1100px 480px at 88% 12%, rgba(94, 234, 212, 0.16), rgba(94, 234, 212, 0) 60%),
-    var(--color-green-deep);
+  background: var(--color-green-deep);
   color: #cde9e0;
 }
 

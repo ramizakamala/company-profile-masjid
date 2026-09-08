@@ -32,8 +32,6 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero__bg" aria-hidden="true">
-        <span className="hero__blob hero__blob--a" />
-        <span className="hero__blob hero__blob--b" />
         <svg className="hero__star" viewBox="0 0 100 100" aria-hidden="true">
           <path
             d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z"
