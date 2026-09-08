@@ -1,7 +1,14 @@
 .donation-cta {
+  position: relative;
+  overflow: hidden;
   padding-block: var(--section-space);
-  background: var(--color-green-deep);
-  color: #EDE7D8;
+  background: radial-gradient(1100px 480px at 88% 12%, rgba(94, 234, 212, 0.16), rgba(94, 234, 212, 0) 60%),
+    var(--color-green-deep);
+  color: #cde9e0;
+}
+
+.donation-cta .eyebrow {
+  color: var(--color-mint);
 }
 
 .donation-cta__inner {
@@ -9,18 +16,20 @@
   justify-content: space-between;
   align-items: center;
   gap: 2.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .donation-cta__headline {
   font-size: var(--step-3);
-  color: #FBF8F0;
-  max-width: 16ch;
+  color: #f2fbf8;
+  max-width: 18ch;
   margin-bottom: 1rem;
 }
 
 .donation-cta__support {
-  color: #C9CDBF;
-  max-width: 46ch;
+  color: #b3ccc2;
+  max-width: 52ch;
 }
 
 .donation-cta__btn {

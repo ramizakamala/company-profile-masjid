@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const links = [
-  { to: '/about', label: 'About' },
-  { to: '/programs', label: 'Programs' },
-  { to: '/events', label: 'Events' },
-  { to: '/articles', label: 'Articles' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/', label: 'Beranda' },
+  { to: '/about', label: 'Profil' },
+  { to: '/programs', label: 'Program' },
+  { to: '/events', label: 'Kegiatan' },
+  { to: '/donation', label: 'Donasi' },
+  { to: '/contact', label: 'Kontak' },
 ];
 
 export default function Navbar() {
@@ -28,31 +28,42 @@ export default function Navbar() {
 
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__inner container">
+      <div className="container navbar__inner">
         <NavLink to="/" className="navbar__logo" onClick={() => setOpen(false)}>
-          <span className="navbar__logo-mark" aria-hidden="true" />
-          AL-Manshur Islamic Center
+          <span className="navbar__logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+              <path
+                d="M12 2 L14.6 9.4 L22 12 L14.6 14.6 L12 22 L9.4 14.6 L2 12 L9.4 9.4 Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+          <span className="navbar__logo-text">
+            <strong>Al-Manshur</strong>
+            <span>Islamic Center · Sumpiuh</span>
+          </span>
         </NavLink>
 
-        <nav className="navbar__links" aria-label="Primary">
+        <nav className="navbar__pill" aria-label="Utama">
           {links.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`}
+              end={link.to === '/'}
+              className={({ isActive }) =>
+                `navbar__link ${isActive ? 'navbar__link--active' : ''} ${
+                  link.to === '/donation' ? 'navbar__link--donate' : ''
+                }`
+              }
             >
               {link.label}
             </NavLink>
           ))}
         </nav>
 
-        <NavLink to="/donation" className="btn btn-primary navbar__cta">
-          Support Us
-        </NavLink>
-
         <button
           className="navbar__toggle"
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? 'Tutup menu' : 'Buka menu'}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
@@ -63,15 +74,18 @@ export default function Navbar() {
       </div>
 
       <div className={`navbar__mobile ${open ? 'navbar__mobile--open' : ''}`}>
-        <nav aria-label="Mobile">
+        <nav aria-label="Menu mobile">
           {links.map((link) => (
-            <NavLink key={link.to} to={link.to} className="navbar__mobile-link" onClick={() => setOpen(false)}>
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) => `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`}
+              onClick={() => setOpen(false)}
+            >
               {link.label}
             </NavLink>
           ))}
-          <NavLink to="/donation" className="btn btn-primary navbar__mobile-cta" onClick={() => setOpen(false)}>
-            Support Us
-          </NavLink>
         </nav>
       </div>
     </header>

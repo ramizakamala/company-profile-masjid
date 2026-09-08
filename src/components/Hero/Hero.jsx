@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { prayerTimes } from '../../data/mockData';
+import { prayerTimes, programs } from '../../data/mockData';
 import './Hero.css';
 
 export default function Hero() {
-  const [nextPrayer, setNextPrayer] = useState({ name: 'Maghrib', time: '18:02' });
+  const [nextPrayer, setNextPrayer] = useState({ name: 'Subuh', time: '04:42' });
 
   useEffect(() => {
     const updateNextPrayer = () => {
@@ -19,7 +19,7 @@ export default function Hero() {
           return;
         }
       }
-      setNextPrayer(prayerTimes[0]); // fallback to Fajr
+      setNextPrayer(prayerTimes[0]); // lewat Isya -> kembali ke Subuh
     };
 
     updateNextPrayer();
@@ -27,42 +27,81 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  const featured = programs[0];
+
   return (
     <section className="hero">
-      <div className="hero__bg-pattern" aria-hidden="true">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="heroGlow" cx="50%" cy="30%" r="60%">
-              <stop offset="0%" stopColor="#2d6a4f" stopOpacity="0.15" />
-              <stop offset="100%" stopColor="#1b4332" stopOpacity="0" />
-            </radialGradient>
-            <pattern id="islamicPattern" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="currentColor" strokeWidth="0.8" strokeOpacity="0.06" />
-              <circle cx="30" cy="30" r="10" fill="none" stroke="currentColor" strokeWidth="0.8" strokeOpacity="0.05" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#heroGlow)" />
-          <rect width="100%" height="100%" fill="url(#islamicPattern)" />
+      <div className="hero__bg" aria-hidden="true">
+        <span className="hero__blob hero__blob--a" />
+        <span className="hero__blob hero__blob--b" />
+        <svg className="hero__star" viewBox="0 0 100 100" aria-hidden="true">
+          <path
+            d="M50 0 L61 39 L100 50 L61 61 L50 100 L39 61 L0 50 L39 39 Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
         </svg>
       </div>
 
       <div className="container hero__inner">
         <div className="hero__copy">
-          <div className="hero__badge">
-            <span className="hero__badge-dot" />
-            <span>Sholat Selanjutnya: <strong>{nextPrayer.name} ({nextPrayer.time} WIB)</strong></span>
-          </div>
+          <p className="hero__badge">
+            <span className="hero__badge-dot" aria-hidden="true" />
+            Menuju sholat <strong>{nextPrayer.name}</strong> · {nextPrayer.time} WIB
+          </p>
 
           <h1 className="hero__headline">
-            A place to worship, learn, and grow together.
+            Masjid kecil yang menjadi <span className="hero__hl">rumah besar</span> bagi umatnya.
           </h1>
           <p className="hero__support">
-            AL-Manshur is a space for prayer, education, and community life —
-            open to worshippers, neighbors, and anyone looking to learn more.
+            Al-Manshur hadir untuk warga Sumpiuh dan sekitarnya — sholat berjamaah,
+            pendidikan Al-Qur&rsquo;an, dan program sosial yang digerakkan relawan.
+            Terbuka untuk siapa saja yang ingin ikut serta.
           </p>
           <div className="hero__actions">
-            <Link to="/programs" className="btn btn-primary hero__btn-glow">Explore Our Programs</Link>
-            <Link to="/contact" className="btn btn-outline">Visit Us</Link>
+            <Link to="/programs" className="btn btn-primary">
+              Jelajahi Program
+            </Link>
+            <Link to="/contact" className="btn btn-outline">
+              Jadwal &amp; Lokasi
+            </Link>
+          </div>
+          <p className="hero__meta">Sejak 2014 · Sumpiuh, Banyumas · Terbuka untuk umum</p>
+        </div>
+
+        <div className="hero__stage">
+          <Link to="/programs" className="hf hf--prog">
+            <img src={featured.image} alt="" className="hf--prog__img" loading="eager" />
+            <div className="hf--prog__body">
+              <span className="hf--prog__cat">{featured.category}</span>
+              <h3>{featured.name}</h3>
+              <p>{featured.schedule}</p>
+            </div>
+          </Link>
+
+          <div className="hf hf--prayer">
+            <div className="hf--prayer__head">
+              <span className="hf--prayer__dot" aria-hidden="true" />
+              <strong>Jadwal Sholat</strong>
+              <span className="hf--prayer__today">hari ini</span>
+            </div>
+            <ul className="hf--prayer__list">
+              {prayerTimes.map((p) => (
+                <li
+                  key={p.name}
+                  className={p.name === nextPrayer.name ? 'hf--prayer__row hf--prayer__row--next' : 'hf--prayer__row'}
+                >
+                  <span>{p.name}</span>
+                  <span className="hf--prayer__time">{p.time}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="hf hf--chip">
+            <span className="hf--chip__mark" aria-hidden="true" />
+            1.200+ jamaah &amp; warga binaan
           </div>
         </div>
       </div>
