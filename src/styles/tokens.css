@@ -1,7 +1,7 @@
 :root {
-  /* Color — palet tosca & emerald (airy, terang) */
-  --color-bg: #F3F9F6;          /* mint putih, latar utama */
-  --color-bg-alt: #E3F1EA;      /* tint tosca lembut */
+  /* Color — palet tosca & emerald (latar terang dibuat netral, aksen tetap) */
+  --color-bg: #F7F9F8;          /* hampir putih, sisa tint hijau sangat tipis */
+  --color-bg-alt: #EDF3F0;      /* tint tosca lembut (lebih pucat dari sebelumnya) */
   --color-surface: #FFFFFF;
   --color-ink: #0B2B23;         /* hijau kehitaman */
   --color-ink-soft: #4C6A60;
