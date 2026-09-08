@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container footer__grid">
         <div className="footer__brand">
           <div className="footer__logo">
-            <img className="footer__logo-img" src="/images/logo-masjid.jpg" alt="Logo Masjid Al-Manshur" />
+            <img className="footer__logo-img" src="/images/logo-masjid.png" alt="Logo Masjid Al-Manshur" />
             Al-Manshur Islamic Center
           </div>
           <p className="footer__desc">

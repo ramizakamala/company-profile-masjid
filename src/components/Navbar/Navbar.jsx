@@ -30,7 +30,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <NavLink to="/" className="navbar__logo" onClick={() => setOpen(false)}>
-          <img className="navbar__logo-img" src="/images/logo-masjid.jpg" alt="Logo Masjid Al-Manshur" />
+          <img className="navbar__logo-img" src="/images/logo-masjid.png" alt="Logo Masjid Al-Manshur" />
           <span className="navbar__logo-text">
             <strong>Al-Manshur</strong>
             <span>Islamic Center · Sumpiuh</span>
