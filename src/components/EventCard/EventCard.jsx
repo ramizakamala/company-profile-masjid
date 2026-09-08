@@ -19,7 +19,7 @@ export default function EventCard({ event, linkTo }) {
         </div>
       </div>
       <div className="event-card__body">
-        <p className="event-card__meta">{weekday} \u00b7 {event.time} \u00b7 {event.location}</p>
+        <p className="event-card__meta">{weekday} · {event.time} · {event.location}</p>
         <h3 className="event-card__title">{event.title}</h3>
         <p className="event-card__desc">{event.description}</p>
       </div>

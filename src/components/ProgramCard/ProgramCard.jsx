@@ -11,11 +11,11 @@ export default function ProgramCard({ program }) {
       <p className="program-card__desc">{program.description}</p>
       <dl className="program-card__meta">
         <div>
-          <dt>Schedule</dt>
+          <dt>Jadwal</dt>
           <dd>{program.schedule}</dd>
         </div>
         <div>
-          <dt>Location</dt>
+          <dt>Tempat</dt>
           <dd>{program.location}</dd>
         </div>
       </dl>

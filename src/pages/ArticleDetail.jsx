@@ -27,7 +27,7 @@ export default function ArticleDetail() {
           <Link to="/articles" className="back-link">&larr; Back to Articles</Link>
           <p className="eyebrow">{article.category}</p>
           <h1>{article.title}</h1>
-          <p className="article-detail__byline">By {article.author} \u00b7 {date}</p>
+          <p className="article-detail__byline">By {article.author} · {date}</p>
 
           {article.content.map((para, i) => (
             <p key={i}>{para}</p>

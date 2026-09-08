@@ -4,14 +4,14 @@ import { events } from '../data/mockData';
 
 export default function Events() {
   const categories = useMemo(
-    () => ['All', ...Array.from(new Set(events.map((e) => e.category)))],
+    () => ['Semua', ...Array.from(new Set(events.map((e) => e.category)))],
     []
   );
-  const [active, setActive] = useState('All');
+  const [active, setActive] = useState('Semua');
   const [query, setQuery] = useState('');
 
   const filtered = events.filter((e) => {
-    const matchesCategory = active === 'All' || e.category === active;
+    const matchesCategory = active === 'Semua' || e.category === active;
     const matchesQuery = e.title.toLowerCase().includes(query.toLowerCase());
     return matchesCategory && matchesQuery;
   });
@@ -20,11 +20,11 @@ export default function Events() {
     <>
       <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">Events</p>
-          <h1 className="page-hero__title">What\u2019s happening at the Center.</h1>
+          <p className="eyebrow">Kegiatan</p>
+          <h1 className="page-hero__title">Agenda &amp; kegiatan rutin masjid.</h1>
           <p className="page-hero__desc">
-            Study circles, community meetings, youth activities, and seasonal
-            gatherings \u2014 all in one place.
+            Kajian, pertemuan komunitas, kegiatan remaja, sampai agenda musiman —
+            semua bisa ditemukan di satu tempat.
           </p>
         </div>
       </section>
@@ -43,10 +43,10 @@ export default function Events() {
             ))}
           </div>
           <label className="events-search">
-            <span className="visually-hidden">Search events</span>
+            <span className="visually-hidden">Cari kegiatan</span>
             <input
               type="search"
-              placeholder="Search events\u2026"
+              placeholder="Cari kegiatan…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
@@ -54,7 +54,7 @@ export default function Events() {
         </div>
 
         {filtered.length === 0 ? (
-          <p className="events-empty">No events match your search just yet.</p>
+          <p className="events-empty">Belum ada kegiatan yang cocok dengan pencarianmu.</p>
         ) : (
           <div className="grid-3">
             {filtered.map((e) => (

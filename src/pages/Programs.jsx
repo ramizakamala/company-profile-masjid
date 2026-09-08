@@ -22,11 +22,11 @@ export default function Programs() {
     <>
       <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">Program & Kegiatan</p>
-          <h1 className="page-hero__title">Something for every stage of life.</h1>
+          <p className="eyebrow">Program</p>
+          <h1 className="page-hero__title">Program rutin untuk setiap usia.</h1>
           <p className="page-hero__desc">
-            Dari kelas bahasa Arab & Tahfidz hingga lumbung pangan jamaah, program kami
-            dikelola bersama oleh pengurus dan relawan setiap minggunya.
+            Dari pendidikan Al-Qur&rsquo;an sampai lumbung pangan warga — semua program dikelola
+            bersama oleh pengurus dan relawan setiap minggunya.
           </p>
         </div>
       </section>

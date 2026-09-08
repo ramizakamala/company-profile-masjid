@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+// [DUMMY] kontak — ganti dengan nomor/email resmi pengurus (lihat DATA_PENGURUS.md)
+const PHONE = '+62 812 3456 7890';
+const EMAIL = 'halo@almanshur.org';
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -12,11 +16,11 @@ export default function Contact() {
     <>
       <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">Contact</p>
-          <h1 className="page-hero__title">We\u2019d love to hear from you.</h1>
+          <p className="eyebrow">Kontak</p>
+          <h1 className="page-hero__title">Ada yang ingin ditanyakan?</h1>
           <p className="page-hero__desc">
-            Questions about programs, visiting, or getting involved \u2014 reach out
-            any time.
+            Tanya soal program, jadwal, kunjungan, atau ingin ikut terlibat —
+            hubungi kami kapan saja.
           </p>
         </div>
       </section>
@@ -26,26 +30,30 @@ export default function Contact() {
           <div className="contact-info">
             <dl>
               <div>
-                <dt>Address</dt>
+                <dt>Alamat</dt>
                 <dd>99Q4+8H8, Gampingan, Kebokura, Kec. Sumpiuh, Kabupaten Banyumas, Jawa Tengah 53195, Indonesia</dd>
               </div>
               <div>
-                <dt>Phone</dt>
-                <dd><a href="tel:+6281234567890">+62 812 3456 7890</a></dd>
+                <dt>Telepon / WhatsApp</dt>
+                <dd>
+                  <a href={`tel:${PHONE.replace(/[^0-9+]/g, '')}`}>{PHONE}</a>
+                </dd>
               </div>
               <div>
                 <dt>Email</dt>
-                <dd><a href="mailto:hello@almanshurcenter.org">hello@almanshurcenter.org</a></dd>
+                <dd>
+                  <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+                </dd>
               </div>
               <div>
-                <dt>Social</dt>
+                <dt>Sosial Media</dt>
                 <dd>Instagram &middot; YouTube &middot; Facebook</dd>
               </div>
             </dl>
 
             <div className="contact-map">
               <iframe
-                title="AL-Manshur Islamic Center location map"
+                title="Lokasi Masjid Al-Manshur"
                 src="https://www.google.com/maps?q=99Q4%2B8H8+Kebokura+Sumpiuh+Banyumas&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -56,12 +64,12 @@ export default function Contact() {
           <form className="contact-form" onSubmit={handleSubmit}>
             {submitted ? (
               <p className="contact-form__success">
-                Thank you \u2014 your message has been sent. We\u2019ll be in touch soon.
+                Terima kasih — pesanmu sudah terkirim. InsyaAllah kami balas secepatnya.
               </p>
             ) : (
               <>
                 <div className="contact-form__field">
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">Nama Lengkap</label>
                   <input id="name" name="name" type="text" required />
                 </div>
                 <div className="contact-form__field">
@@ -69,14 +77,14 @@ export default function Contact() {
                   <input id="email" name="email" type="email" required />
                 </div>
                 <div className="contact-form__field">
-                  <label htmlFor="subject">Subject</label>
+                  <label htmlFor="subject">Perihal</label>
                   <input id="subject" name="subject" type="text" required />
                 </div>
                 <div className="contact-form__field">
-                  <label htmlFor="message">Message</label>
+                  <label htmlFor="message">Pesan</label>
                   <textarea id="message" name="message" rows="5" required />
                 </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                <button type="submit" className="btn btn-primary">Kirim Pesan</button>
               </>
             )}
           </form>

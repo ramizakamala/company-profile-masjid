@@ -3,10 +3,10 @@ import SectionHeader from '../components/SectionHeader/SectionHeader';
 import { leadership, timeline } from '../data/mockData';
 
 const values = [
-  { name: 'Faith', text: 'Every program begins with sincerity of purpose and grounding in Islamic principle.' },
-  { name: 'Community', text: 'We build relationships across generations, backgrounds, and walks of life.' },
-  { name: 'Knowledge', text: 'We treat learning as a lifelong pursuit, open to beginners and scholars alike.' },
-  { name: 'Service', text: 'We measure our success by how well we serve our neighbors, not just our members.' },
+  { name: 'Ikhlas', text: 'Setiap program dimulai dari niat tulus dan berpegang pada nilai-nilai Islam.' },
+  { name: 'Ukhuwah', text: 'Kami membangun hubungan lintas usia dan latar belakang — masjid ini milik semua warga.' },
+  { name: 'Ilmu', text: 'Belajar adalah perjalanan seumur hidup, terbuka bagi pemula sampai yang sudah mendalam.' },
+  { name: 'Khidmat', text: 'Kami mengukur keberhasilan dari seberapa baik melayani tetangga, bukan sekadar jumlah anggota.' },
 ];
 
 export default function About() {
@@ -14,10 +14,11 @@ export default function About() {
     <>
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-hero__title">A community built over a decade of service.</h1>
+          <p className="eyebrow">Profil</p>
+          <h1 className="page-hero__title">Masjid yang lahir dari kebersamaan warga.</h1>
           <p className="page-hero__desc">
-            AL-Manshur Islamic Center exists to serve as a place of worship, learning, and
-            belonging — open to anyone in the community, regardless of background.
+            Masjid Al-Manshur hadir sebagai tempat ibadah, belajar, dan saling menguatkan —
+            terbuka untuk siapa saja di lingkungan Taman Kota Sumpiuh dan sekitarnya.
           </p>
         </div>
       </section>
@@ -27,21 +28,21 @@ export default function About() {
           <div className="about-story__media">
             <img
               src="/images/mosque_exterior.jpg"
-              alt="Halaman dan bangunan AL-Manshur Islamic Center"
+              alt="Halaman dan bangunan Masjid Al-Manshur"
             />
           </div>
           <div className="about-story__text">
-            <p className="eyebrow">Our Story</p>
-            <h2>From a small home gathering to a mosque of our own.</h2>
+            <p className="eyebrow">Cerita Kami</p>
+            <h2>Dari pengajian kecil, menjadi masjid milik warga.</h2>
             <p>
-              AL-Manshur began as a small group of neighbors holding regular study circles
-              and prayers in one family&rsquo;s home. As more residents joined, the dream of
-              a dedicated mosque took shape.
+              Al-Manshur berawal dari sekelompok warga yang rutin mengaji dan sholat berjamaah
+              di rumah salah satu keluarga. Makin banyak yang bergabung, makin kuat keinginan
+              untuk memiliki masjid sendiri.
             </p>
             <p>
-              Through collective effort and community donations, Masjid Al-Manshur was
-              officially established in 2025 &mdash; and is now growing into a center for
-              daily prayer, Qur&rsquo;an education, and mutual support for the neighborhood.
+              Lewat gotong royong dan donasi warga, Masjid Al-Manshur resmi berdiri pada 2025 —
+              dan terus bertumbuh menjadi pusat sholat berjamaah, pendidikan Al-Qur&rsquo;an,
+              dan kepedulian sosial untuk lingkungan sekitar.
             </p>
           </div>
         </div>
@@ -51,17 +52,17 @@ export default function About() {
         <div className="container">
           <div className="about-mission">
             <div className="about-mission__card">
-              <p className="eyebrow">Vision</p>
+              <p className="eyebrow">Visi</p>
               <p className="about-mission__text">
-                A community where faith, knowledge, and mutual care are accessible
-                to every neighbor, regardless of background or circumstance.
+                Menjadi masjid yang hidup: ibadah yang nyaman, ilmu yang berkembang, dan warga
+                yang saling peduli — untuk siapa pun, dari latar belakang apa pun.
               </p>
             </div>
             <div className="about-mission__card">
-              <p className="eyebrow">Mission</p>
+              <p className="eyebrow">Misi</p>
               <p className="about-mission__text">
-                To provide a welcoming home for worship and learning, and to serve
-                our neighbors through education, mentorship, and direct support.
+                Menghadirkan rumah ibadah dan belajar yang terbuka, mendampingi warga melalui
+                pendidikan, serta menyalurkan bantuan secara amanah dan transparan.
               </p>
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function About() {
       </section>
 
       <section className="section container">
-        <SectionHeader eyebrow="What Guides Us" title="Our values" />
+        <SectionHeader eyebrow="Yang Kami Pegang" title="Nilai-nilai Al-Manshur." />
         <div className="grid-4 about-values">
           {values.map((v) => (
             <div key={v.name} className="about-values__item">
@@ -82,12 +83,12 @@ export default function About() {
 
       <section className="section section--alt">
         <div className="container">
-          <SectionHeader eyebrow="Our People" title="Leadership" />
+          <SectionHeader eyebrow="Pengurus & Relawan" title="Yang mengurus di balik layar." />
           <div className="grid-4">
             {leadership.map((person) => (
               <div key={person.name} className="leader-card">
                 <div className="leader-card__media">
-                  <img src={person.image} alt={`Portrait of ${person.name}`} />
+                  <img src={person.image} alt={`Potret ${person.name}`} />
                 </div>
                 <h3>{person.name}</h3>
                 <p>{person.role}</p>
@@ -98,7 +99,7 @@ export default function About() {
       </section>
 
       <section className="section container">
-        <SectionHeader eyebrow="Our Journey" title="A decade of milestones" />
+        <SectionHeader eyebrow="Perjalanan Kami" title="Dari niat warga sampai berdiri." />
         <ol className="timeline">
           {timeline.map((item) => (
             <li key={item.year} className="timeline__item">
@@ -111,9 +112,9 @@ export default function About() {
 
       <section className="section section--deep about-cta">
         <div className="container about-cta__inner">
-          <h2>Come see it for yourself.</h2>
-          <p>We welcome visitors at any of our daily prayers or weekly programs.</p>
-          <Link to="/contact" className="btn btn-gold">Plan Your Visit</Link>
+          <h2>Masjid ini milik kita bersama.</h2>
+          <p>Sholat berjamaah dan program kami terbuka — silakan mampir kapan pun.</p>
+          <Link to="/contact" className="btn btn-gold">Rencanakan Kunjungan</Link>
         </div>
       </section>
     </>

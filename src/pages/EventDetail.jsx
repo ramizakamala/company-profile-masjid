@@ -15,26 +15,26 @@ export default function EventDetail() {
       </div>
       <section className="section container">
         <div className="detail-content">
-          <Link to="/events" className="back-link">&larr; Back to Events</Link>
+          <Link to="/events" className="back-link">&larr; Semua Kegiatan</Link>
           <p className="eyebrow">{event.category}</p>
           <h1>{event.title}</h1>
         </div>
 
         <dl className="detail-meta">
           <div>
-            <dt>Date</dt>
+            <dt>Tanggal</dt>
             <dd>{event.displayDate}</dd>
           </div>
           <div>
-            <dt>Time</dt>
-            <dd>{event.time}</dd>
+            <dt>Waktu</dt>
+            <dd>{event.time} WIB</dd>
           </div>
           <div>
-            <dt>Location</dt>
+            <dt>Tempat</dt>
             <dd>{event.location}</dd>
           </div>
           <div>
-            <dt>Speaker</dt>
+            <dt>Pemateri</dt>
             <dd>{event.speaker}</dd>
           </div>
         </dl>
@@ -42,8 +42,8 @@ export default function EventDetail() {
         <div className="detail-content">
           <p>{event.description}</p>
           <div className="detail-content__cta">
-            <a href="mailto:hello@almanshurcenter.org" className="btn btn-primary">
-              Register Your Interest
+            <a href="mailto:halo@almanshur.org" className="btn btn-primary">
+              Tertarik Ikut? Hubungi Kami
             </a>
           </div>
         </div>
