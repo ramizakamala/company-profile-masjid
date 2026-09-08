@@ -23,13 +23,12 @@
   margin-bottom: 1rem;
 }
 
-.footer__logo .navbar__logo-mark {
-  background: #ffffff;
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 11px;
+.footer__logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .footer__desc {
