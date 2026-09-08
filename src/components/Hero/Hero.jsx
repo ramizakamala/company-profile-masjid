@@ -4,7 +4,7 @@ import { prayerTimes, programs } from '../../data/mockData';
 import './Hero.css';
 
 export default function Hero() {
-  const [nextPrayer, setNextPrayer] = useState({ name: 'Subuh', time: '04:42' });
+  const [next, setNext] = useState({ name: 'Subuh', time: '04:42', mins: null });
 
   useEffect(() => {
     const updateNextPrayer = () => {
@@ -15,19 +15,23 @@ export default function Hero() {
         const [h, m] = p.time.split(':').map(Number);
         const pMinutes = h * 60 + m;
         if (pMinutes > currentMinutes) {
-          setNextPrayer(p);
+          setNext({ name: p.name, time: p.time, mins: pMinutes - currentMinutes });
           return;
         }
       }
-      setNextPrayer(prayerTimes[0]); // lewat Isya -> kembali ke Subuh
+      // sudah lewat Isya -> Subuh besok
+      const [h, m] = prayerTimes[0].time.split(':').map(Number);
+      const tomorrow = 24 * 60 - currentMinutes + h * 60 + m;
+      setNext({ name: prayerTimes[0].name, time: prayerTimes[0].time, mins: tomorrow });
     };
 
     updateNextPrayer();
-    const interval = setInterval(updateNextPrayer, 60000);
+    const interval = setInterval(updateNextPrayer, 30000);
     return () => clearInterval(interval);
   }, []);
 
   const featured = programs[0];
+  const inMinutes = next.mins != null && next.mins > 0 && next.mins <= 90 ? ` · dalam ${next.mins} menit` : '';
 
   return (
     <section className="hero">
@@ -44,9 +48,10 @@ export default function Hero() {
 
       <div className="container hero__inner">
         <div className="hero__copy">
-          <p className="hero__badge">
-            <span className="hero__badge-dot" aria-hidden="true" />
-            Menuju sholat <strong>{nextPrayer.name}</strong> · {nextPrayer.time} WIB
+          <p className="hero__next">
+            <span className="hero__next-dot" aria-hidden="true" />
+            Menuju sholat <strong>{next.name}</strong> · {next.time} WIB
+            {inMinutes && <span className="hero__next-in">{inMinutes}</span>}
           </p>
 
           <h1 className="hero__headline">
