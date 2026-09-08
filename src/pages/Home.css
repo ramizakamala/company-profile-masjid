@@ -256,6 +256,7 @@
 
 .hm-stat {
   background: var(--color-surface);
+  border: 1px solid var(--color-line-soft);
   border-radius: var(--radius-l);
   padding: 1.9rem 1.7rem 1.6rem;
   min-width: 208px;
@@ -320,7 +321,9 @@
 
 .hm-event:hover {
   background: var(--color-surface);
-  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-line-soft);
+  padding-inline: calc(0.5rem - 1px);
+  padding-block: calc(1.6rem - 1px);
 }
 
 .hm-event__date {
@@ -390,9 +393,9 @@
 .hm-quote {
   margin: 0;
   background: var(--color-surface);
+  border: 1px solid var(--color-line-soft);
   border-radius: var(--radius-l);
   padding: clamp(1.8rem, 4vw, 3rem);
-  box-shadow: var(--shadow-soft);
 }
 
 .hm-quote blockquote {

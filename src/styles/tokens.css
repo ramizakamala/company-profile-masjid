@@ -14,10 +14,10 @@
   --color-line: rgba(11, 43, 35, 0.14);
   --color-line-soft: rgba(11, 43, 35, 0.07);
 
-  /* Shadow */
-  --shadow-soft: 0 10px 30px rgba(15, 118, 110, 0.08);
-  --shadow-float: 0 24px 50px -12px rgba(5, 59, 49, 0.28);
-  --shadow-glow: 0 10px 24px rgba(15, 118, 110, 0.28);
+  /* Shadow — minimal, kartu lebih datar (pisah via border, bukan bayangan) */
+  --shadow-soft: 0 4px 14px -8px rgba(11, 43, 35, 0.1);
+  --shadow-float: 0 14px 28px -18px rgba(5, 59, 49, 0.18);
+  --shadow-glow: 0 0 0 rgba(15, 118, 110, 0);
 
   /* Type */
   --font-display: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;

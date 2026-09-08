@@ -125,8 +125,9 @@
 .hf {
   position: absolute;
   background: var(--color-surface);
+  border: 1px solid var(--color-line-soft);
   border-radius: 22px;
-  box-shadow: var(--shadow-float);
+  box-shadow: var(--shadow-soft);
 }
 
 .hf a {
@@ -267,11 +268,12 @@
   gap: 0.6rem;
   background: var(--color-teal);
   color: #f0fdf9;
+  border: none;
   border-radius: 999px;
   padding: 0.8rem 1.35rem;
   font-size: var(--step--1);
   font-weight: 600;
-  box-shadow: var(--shadow-float);
+  box-shadow: var(--shadow-soft);
   animation: float-c 6.5s ease-in-out infinite;
 }
 
