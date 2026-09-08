@@ -93,7 +93,7 @@ export default function Hero() {
               {prayerTimes.map((p) => (
                 <li
                   key={p.name}
-                  className={p.name === nextPrayer.name ? 'hf--prayer__row hf--prayer__row--next' : 'hf--prayer__row'}
+                  className={p.name === next.name ? 'hf--prayer__row hf--prayer__row--next' : 'hf--prayer__row'}
                 >
                   <span>{p.name}</span>
                   <span className="hf--prayer__time">{p.time}</span>
